@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 html {
-    margin: 0px;
+   
 }
 
 body {
@@ -21,11 +21,11 @@ nav {
     display: flex;
     position: fixed;
     width: 100%;
+    top: 0rem;
     justify-content: space-between;
     background-color: rgb(205, 216, 255);
     font-size: 1.5rem;
     font-weight: 600;
-    margin-right: 1.5rem;
     z-index: 5;
     border-bottom: black 2px solid;
 }
@@ -62,6 +62,13 @@ nav a {
 
 /*     HERO       */
 
+.hero-total-area {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+
+
 .hero-container {
     justify-content: center;
     text-align: center;
@@ -70,7 +77,6 @@ nav a {
     top: 5.5rem;
     background-image: url(images/SadGuyBench.jpeg);
     width: 50%;
-    margin-left: 25%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -96,14 +102,22 @@ nav a {
 
 /* FEATURES SECTION */
 
+.features-total-area {
+    display: flex;
+    justify-content: center;
+}
+
 .features-section {
     position: relative;
     top: 5.5rem;
     max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 6rem 7rem;
+    
     background-color: rgb(205, 216, 255);
+    margin: 0;
+    
 }
 
 .features-section .img-container {
@@ -119,7 +133,7 @@ nav a {
 
 .features-section .features-list {
    width: 50%;
-   margin-left: 5rem;
+   margin-left: 0rem;  /*  was 5rem  */
    padding: 2rem;
    background-color: blue;
    color: white;
@@ -192,14 +206,12 @@ nav a {
     overflow: hidden;
     max-width: 100%;
     width: 50%;
-    height: 100%;
 }
 
 .test-img img {
     object-fit: cover;
     object-position: top;
     width: 100%;
-    height: 100%;
     background-color: rgb(254, 247, 117);
 }
 
@@ -251,10 +263,10 @@ footer {
         padding-right: 4rem;
     }
     
-    .features-section {
+  /*  .features-section {
         margin: 25%;
-        padding: 0rem;
-    }
+        padding: 0rem; 
+    }     */
 }
 
 
@@ -279,11 +291,6 @@ footer {
     }
 
     .features-section .features-list {
-        margin-right: 25%;
-    }
-
-    .features-section .features-list {
-        margin-left: 25%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -320,15 +327,63 @@ footer {
 
     #mcmahon-container {
         margin-bottom: 4rem;
-
     }
 
     }
+
+
+    /*    Media queries for tablets     */
+    @media only screen and (max-width: 768px) {
+        .hero-container {
+            width: 80%;
+        }
+
+        .features-section .img-container, .features-section .features-list {
+            width: 80%;
+        }
+    }
+
+        .hero-total-area {
+        display: flex;
+        justify-content: center;
+        }
 
 
     /*    Media queries for phones  */
     @media only screen and (max-width: 480px) {
+        
+        nav {
+            width: 100%;
+            font-size: .75rem;
+        }
+
+        nav li {
+            padding: .5rem;
+            font-weight: 900;
+        }
+
+        nav ul {
+            padding: .2rem 1rem 0 0;
+        }
+
+        .nav-logo {
+            position: relative;
+            right: 2rem;
+        }
+                
         .hero-container h1 {
             font-size: 2rem;
+
+        }
+
+        #icp-pic {
+            object-position: 20%;
+            object-fit: cover;
+        }
+
+        .test-container {
+            padding-left: 0;
         }
     }
+
+    
