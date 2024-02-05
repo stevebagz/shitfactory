@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 html {
    
 }
@@ -10,7 +14,6 @@ body {
     position: relative;
     bottom: 1.75rem;
     background-color: rgb(239, 255, 158);
-    
 }
 
 
@@ -263,10 +266,6 @@ footer {
         padding-right: 4rem;
     }
     
-  /*  .features-section {
-        margin: 25%;
-        padding: 0rem; 
-    }     */
 }
 
 
@@ -353,7 +352,6 @@ footer {
     @media only screen and (max-width: 480px) {
         
         nav {
-            width: 100%;
             font-size: .75rem;
         }
 
